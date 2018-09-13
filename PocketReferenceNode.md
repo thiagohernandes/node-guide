@@ -16,13 +16,19 @@ In an event-driven application, there is generally a main loop that listens for 
 # -----------------------------------------------------------
 # Notice 2
 # -----------------------------------------------------------
-
 Many objects in a Node emit events, for example, a net.Server emits an event each time a peer connects to it, an fs.readStream emits an event when the file is opened. All objects which emit events are the instances of "events.EventEmitter".
+
+# -----------------------------------------------------------
+# Notice 3 - são equivalentes
+# -----------------------------------------------------------
+// Bind the connection event with the listner1 function
+eventEmitter.addListener('connection', listner1);
+// Bind the connection event with the listner2 function
+eventEmitter.on('connection', listner2);
 
 # -----------------------------------------------------------
 # open file
 # -----------------------------------------------------------
-
 Open a File
 Syntax
 Following is the syntax of the method to open a file in asynchronous mode −
